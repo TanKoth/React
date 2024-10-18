@@ -28,4 +28,4 @@
 1. Clone the repository:
 
    ```sh
-   git clone <repository-url>
+   git clone <[repository-url](https://github.com/TanKoth/React.git)>

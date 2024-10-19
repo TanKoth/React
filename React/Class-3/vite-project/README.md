@@ -31,5 +31,5 @@ This project is a React application built using Vite. It demonstrates the use of
 1. Clone the repository:
 
    ```sh
-   git clone <repository-url>
+   git clone https://github.com/TanKoth/React.git
 

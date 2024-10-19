@@ -1,8 +1,34 @@
-# React + Vite
+# Class-3: Vite React Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React application built using Vite. It demonstrates the use of React components, state management, and conditional rendering.
 
-Currently, two official plugins are available:
+## Project Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Key Files and Directories
+
+- **src/**: Contains the source code for the React application.
+  - **App.jsx**: The main application component.
+  - **components/**: Contains reusable React components.
+    - **Form.jsx**: A form component that handles user input and submission.
+  - **assets/**: Contains static assets like images and fonts.
+  - **index.css**: Global CSS styles.
+  - **main.jsx**: The entry point of the React application.
+
+- **index.html**: The main HTML file.
+- **package.json**: Contains project metadata and dependencies.
+- **vite.config.js**: Configuration file for Vite, the build tool.
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (version 14 or higher)
+- npm (version 6 or higher) or yarn (version 1.22 or higher)
+
+### Installation
+
+1. Clone the repository:
+
+   ```sh
+   git clone <repository-url>
+

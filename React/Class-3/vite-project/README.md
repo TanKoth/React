@@ -9,7 +9,8 @@ This project is a React application built using Vite. It demonstrates the use of
 - **src/**: Contains the source code for the React application.
   - **App.jsx**: The main application component.
   - **components/**: Contains reusable React components.
-    - **Form.jsx**: A form component that handles user input and submission.
+    - **Form.jsx**: A form component that handles user input and submission, using useState hook.
+    - **FetchComponent**: A service which fetch data from "https://jsonplaceholder.typicode.com/users", using useEffect and useState hook.
   - **assets/**: Contains static assets like images and fonts.
   - **index.css**: Global CSS styles.
   - **main.jsx**: The entry point of the React application.

@@ -11,7 +11,8 @@ function Users(props) {
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
-        `https://fakestoreapi.com/users/${params.id}`
+        //`https://fakestoreapi.com/users/${params.id}`
+        `http://localhost:8080/products/${params.id}`
       );
       const userData = await response.json();
       console.log("User Data:", userData);
@@ -28,17 +29,22 @@ function Users(props) {
         <h3>Loading........</h3>
       ) : (
         <>
-          <label htmlFor="username">User Data</label>
-          <input type="text" id="username" value={userData.username} />
+          <label htmlFor="id">ID</label>
+          <input type="text" id="id" value={userData.id} />
           <br></br>
-          <label htmlFor="firstname">First Name</label>
-          <input type="text" id="firstname" value={userData.name.firstname} />
+          <label htmlFor="title">Title</label>
+          <input type="text" id="title" value={userData.title} />
           <br></br>
-          <label htmlFor="lastname">Last Name</label>
-          <input type="text" id="lastname" value={userData.name.lastname} />
+          <label htmlFor="description">Description</label>
+          <input
+            style={{ width: "20%", position: "absolute" }}
+            type="text"
+            id="description"
+            value={userData.description}
+          />
           <br></br>
-          <label htmlFor="email">Email</label>
-          <input type="text" id="email" value={userData.email} />
+          <label htmlFor="price">Price</label>
+          <input type="text" id="price" value={userData.price} />
 
           {/* <h3>User Data:{userData.username}</h3>
           <h3>First Name:{userData.name.firstname}</h3>
@@ -74,7 +80,7 @@ function Routing() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="users/:id" element={<Users isAdmin={true}></Users>} />
+        <Route path="products/:id" element={<Users isAdmin={true}></Users>} />
       </Routes>
     </>
   );

@@ -4,6 +4,8 @@ import MovieCard from "./MovieCard";
 import axios from "axios";
 
 function Movies() {
+  const tdmb_api_key = import.meta.env.VITE_TMDB_API_KEY;
+  //console.log(tdmb_api_key);
   const [movies, setMovies] = useState([]);
   const [pageNo, setPageNo] = useState(1);
   const [watchlist, setWatchlist] = useState([]);
@@ -24,7 +26,7 @@ function Movies() {
   useEffect(() => {
     axios
       .get(
-        `https://api.themoviedb.org/3/trending/movie/day?api_key=a215060ed928c1609558b8c77fe07dbb&language=en-US&page=${pageNo}`
+        `https://api.themoviedb.org/3/trending/movie/day?api_key=${tdmb_api_key}&language=en-US&page=${pageNo}`
       )
       .then((response) => {
         //console.log(response.data.results);

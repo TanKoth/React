@@ -2,13 +2,14 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 function Banner() {
+  const tdmb_api_key = import.meta.env.VITE_TMDB_API_KEY;
   const [bannerImage, setBannerImage] = useState("");
   const [title, setTitle] = useState("");
 
   useEffect(() => {
     axios
       .get(
-        "https://api.themoviedb.org/3/trending/movie/day?api_key=a215060ed928c1609558b8c77fe07dbb&language=en-US&page=1"
+        `https://api.themoviedb.org/3/trending/movie/day?api_key=${tdmb_api_key}&language=en-US&page=1`
       )
       .then((response) => {
         //console.log("Films:", response.data.results);

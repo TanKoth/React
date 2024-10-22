@@ -8,7 +8,7 @@ function Banner() {
   useEffect(() => {
     axios
       .get(
-        "https://api.themoviedb.org/3/trending/movie/day?api_key=a215060ed928c1609558b8c77fe07dbb&language=en-US&page=1"
+        "https://api.themoviedb.org/3/trending/movie/day?api_key=api_key&language=en-US&page=1"
       )
       .then((response) => {
         //console.log("Films:", response.data.results);

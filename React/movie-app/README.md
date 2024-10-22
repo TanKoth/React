@@ -7,10 +7,10 @@ This project is a movie application built using React and Tailwind CSS. It demon
 ### Key Files and Directories
 
 - **src/**: Contains the source code for the React application.
-  - **App.jsx**: The main application component.
-  - **components/**: Contains reusable React components.
-    -**Banner.jsx**: A component to display the movie Banner.
-    -**Home.jsx**: Calling Banner and Movies component in Home component. 
+    - **App.jsx**: The main application component.
+    - **components/**: Contains reusable React components.
+    - **Banner.jsx**: A component to display the movie Banner.
+    - **Home.jsx**: Calling Banner and Movies component in Home component. 
     - **MovieCard.jsx**: A component to display individual movie details.
     - **Movies.jsx**: A component where logic is written to fetch movie data from TMDB and logic for pagination.
     - **NavBar.jsx**: A component where the NavBar component logic written.

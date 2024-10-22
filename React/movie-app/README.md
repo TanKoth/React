@@ -34,4 +34,4 @@ This project is a movie application built using React and Tailwind CSS. It demon
 1. Clone the repository:
 
    ```sh
-   git clone <repository-url>
+   git clone https://github.com/TanKoth/React.git

@@ -18,6 +18,7 @@ function MovieCard({ movie, addToWatchlist, watchlist, removeFromWatchlist }) {
       <div className="text-white w-full text-center text-xl p-2 bg-gray-900/70 rounded-lg">
         {movie.title}
       </div>
+
       <div className="text-2xl">
         {doesContain(movie) ? (
           <div onClick={() => removeFromWatchlist(movie)}>✖</div>

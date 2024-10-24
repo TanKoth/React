@@ -1,27 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Pagination from "./Pagination";
 import MovieCard from "./MovieCard";
 import axios from "axios";
+import { WatchListContext } from "../context/WatchListContext";
 
 function Movies() {
   const tdmb_api_key = import.meta.env.VITE_TMDB_API_KEY;
   //console.log(tdmb_api_key);
   const [movies, setMovies] = useState([]);
   const [pageNo, setPageNo] = useState(1);
-  const [watchlist, setWatchlist] = useState([]);
-
-  const addToWatchlist = (movie) => {
-    const updatedWatchlist = [...watchlist, movie];
-    setWatchlist(updatedWatchlist);
-  };
-  //console.log(watchlist);
-
-  const removeFromWatchlist = (movie) => {
-    const removeUpdatedWatchlist = watchlist.filter(
-      (movieList) => movieList.id !== movie.id
-    );
-    setWatchlist(removeUpdatedWatchlist);
-  };
+  const { watchList, addToWatchList, removeFromWatchList } =
+    useContext(WatchListContext);
 
   useEffect(() => {
     axios
@@ -56,9 +45,9 @@ function Movies() {
             <MovieCard
               movie={movie}
               key={index}
-              addToWatchlist={addToWatchlist}
-              watchlist={watchlist}
-              removeFromWatchlist={removeFromWatchlist}
+              addToWatchlist={addToWatchList}
+              watchlist={watchList}
+              removeFromWatchlist={removeFromWatchList}
             />
           );
         })}
